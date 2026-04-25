@@ -64,8 +64,8 @@ func main() {
 
 func GetMaxAndMinFromArray(arr [10]int) (max int, min int) {
 	if len(arr) >= 0 {
-		max := arr[0]
-		min := arr[0]
+		max = arr[0]
+		min = arr[0]
 
 		for _, v := range arr {
 			if max < v {
@@ -83,8 +83,8 @@ func GetMaxAndMinFromArray(arr [10]int) (max int, min int) {
 
 func GetMaxAndMinFromArray4(arr [4]int) (max int, min int) {
 	if len(arr) >= 0 {
-		max := arr[0]
-		min := arr[0]
+		max = arr[0]
+		min = arr[0]
 
 		for _, v := range arr {
 			if max < v {
