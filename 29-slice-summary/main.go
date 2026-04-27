@@ -33,5 +33,4 @@ func main() {
 	// append
 	// copy
 	// clear
-
 }
