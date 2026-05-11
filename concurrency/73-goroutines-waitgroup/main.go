@@ -10,7 +10,7 @@ func main() {
 	//wg.Add(6)
 
 	wg.Add(1)
-	go Even(wg, "even-1", 1, 10, time.Microsecond*100)
+	go Even(wg, "even-1", 1, 10, time.Microsecond*100) // G is created
 
 	wg.Add(1)
 	go Odd(wg, "odd-1", 1, 10, time.Microsecond*111)
