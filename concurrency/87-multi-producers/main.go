@@ -13,17 +13,17 @@ func main() {
 
 	wg.Add(1)
 	go func() {
-		Publisher(ch, "pub-1", 2)
+		Producer(ch, "pub-1", 2)
 		wg.Done()
 	}()
 	wg.Add(1)
 	go func() {
-		Publisher(ch, "pub-2", 2)
+		Producer(ch, "pub-2", 2)
 		wg.Done()
 	}()
 	wg.Add(1)
 	go func() {
-		Publisher(ch, "pub-3", 3)
+		Producer(ch, "pub-3", 3)
 		wg.Done()
 	}()
 
@@ -38,7 +38,7 @@ func main() {
 
 }
 
-func Publisher(ch chan string, name string, r int) {
+func Producer(ch chan string, name string, r int) {
 	for i := 1; i <= r; i++ {
 		ch <- fmt.Sprint("Publisher->", name, "-->", i)
 		time.Sleep(time.Millisecond * 100)
